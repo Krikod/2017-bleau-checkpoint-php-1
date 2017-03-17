@@ -1,0 +1,32 @@
+<?php
+
+if (
+    empty($_POST['author']) || 
+    empty($_POST['content']) || 
+    empty($_POST['chapter']) || 
+    empty($_POST['date']) ||
+    empty($_POST['image'])
+    ){
+    echo "Merci de remplir tous les champs";
+}
+else{
+    include_once 'modele/connexion_bdd.php';
+
+    $auteur = htmlspecialchars($_POST['author']);
+    $citation = htmlspecialchars($_POST['content']);
+    $episode = htmlspecialchars($_POST['chapter']);
+    $date = htmlspecialchars($_POST['date']);
+    $image = htmlspecialchars($_POST['image']);
+
+    $query = $bdd->prepare('INSERT INTO citation (author, content, chapter, date, image) VALUES (?, ?, ?, ?)');
+    $query->execute(array(
+        $auteur,
+        $citation,
+        $episode,
+        $date
+        $image
+        ));
+    $query->closeCursor();
+}
+
+header('Location: index_admin.php');

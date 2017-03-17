@@ -12,11 +12,10 @@
 <body>
 	<div class="col-sm-12 col-md-12">
 		<nav>
-			<p class="kaamelott-font">Cestpasfaux.com</p>
-			<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Ajouter</a>
-			</nav>
-		</div>
-
+			<a href="index.php" class="kaamelott-font">Cestpasfaux.com</a>
+			<p class="item-actions"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Ajouter</a>
+		</nav>
+	</div>
 		<div class="container">
 			<div class="kaamelott-banner jumbotron kaamelott-underline">
 				<h1>C'EST PAS FAUX !</h1>
@@ -39,6 +38,7 @@
 							<span class="hider"></span>
 						</div>
 						<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Voir plus</a></p>
+						<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -76,6 +76,7 @@
 							<span class="hider"></span>
 						</div>
 						<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#2">Voir plus</a></p>
+						<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -114,6 +115,7 @@
 							<span class="hider"></span>
 						</div>
 						<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#3">Voir plus</a></p>
+						<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -152,6 +154,7 @@
 							<span class="hider"></span>
 						</div>
 						<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#4">Voir plus</a></p>
+						<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -190,6 +193,7 @@
 							<span class="hider"></span>
 						</div>
 						<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#5">Voir plus</a></p>
+						<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -228,6 +232,7 @@
 							<span class="hider"></span>
 						</div>
 						<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#6">Voir plus</a></p>
+						<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
 					</div>
 				</div>
 				<!-- Modal -->
