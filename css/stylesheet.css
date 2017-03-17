@@ -14,11 +14,17 @@
 \************************************************/
 @font-face {
   font-family: 'Folkard';
-  src: url('fonts/folkard_.ttf');
+  src: url('../fonts/folkard_.ttf');
 }
 
 .kaamelott-font {
   font-family: 'Folkard';
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 5px;
+  margin: 0%;
+  color: white;
+
 }
 
 /************************************************\
@@ -26,8 +32,17 @@
 2. Navbar
 ==================================================
 \************************************************/
+nav {
+  background-color: #232729;
+  height: 60px;
+  position: left;
+  vertical-align: center;
+  padding-top: 10px; 
+}
 
-
+nav .ajouter {
+  margin-top: 0;
+}
 
 /************************************************\
 ==================================================
@@ -35,7 +50,7 @@
 ==================================================
 \************************************************/
 
-.kaamelott-underline {
+.kaamelott-underline, nav {
   border-bottom: solid 5px #a57824;
 }
 
