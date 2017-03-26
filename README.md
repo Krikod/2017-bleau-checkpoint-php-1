@@ -19,9 +19,9 @@ Respecter le nom des variables !!!
 ### 2. La base de données doit contenir:
  - Une table nommé *citation*
  - Catte table doit contenir:
-  - Champ *id* primary key auto-increment
-  - Champ *author* type text
-  - Champ *chapter* type text
-  - Champ *content* type longtext
-  - Champ *date* type date
-  - Champ *image* type longtext
+   - Champ *id* primary key auto-increment
+   - Champ *author* type text
+   - Champ *chapter* type text
+   - Champ *content* type longtext
+   - Champ *date* type date
+   - Champ *image* type longtext
