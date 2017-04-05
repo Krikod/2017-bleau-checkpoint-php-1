@@ -1,3 +1,11 @@
+	
+	<footer>
+		<div class="list-group">
+			  <a class="list-group-item" href="https://fr-fr.facebook.com/kaamelott.laserie"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			  <a class="list-group-item" href="https://twitter.com/kaamelott"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			  <a class="list-group-item" href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i></a>
+		</div>
+	</footer>
 	<script
 	  src="https://code.jquery.com/jquery-2.2.4.min.js"
 	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -9,5 +17,6 @@
 			$('select').material_select();
 		});
 	</script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
