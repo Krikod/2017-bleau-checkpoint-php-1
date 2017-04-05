@@ -14,7 +14,7 @@
 \************************************************/
 @font-face {
   font-family: 'Folkard';
-  src: url('../fonts/folkard_.ttf');
+  src: url('fonts/folkard_.ttf');
 }
 
 .kaamelott-font {
@@ -38,6 +38,14 @@ nav {
   position: left;
   vertical-align: center;
   padding-top: 10px; 
+}
+
+nav a .kaamelott-font {
+  /* centrer verticalement le lien */
+}
+
+nav a:hover {
+  text-decoration: none;
 }
 
 
@@ -126,5 +134,7 @@ blockquote {
 
 .list-group a {
   display: inline-block;
-  margin: 0 auto;
+  text-align: center;
+  margin: auto; /* centrer les icônes !!!*/
+
 }
