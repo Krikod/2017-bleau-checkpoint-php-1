@@ -21,10 +21,8 @@
   font-family: 'Folkard';
   font-weight: bold;
   font-size: 1.5em;
-  padding: 5px;
-  margin: 0%;
+  margin-left: 10px;
   color: white;
-
 }
 
 /************************************************\
@@ -34,20 +32,17 @@
 \************************************************/
 nav {
   background-color: #232729;
-  height: 60px;
-  position: left;
-  vertical-align: center;
-  padding-top: 10px; 
+  height: 60px; 
 }
 
-nav a .kaamelott-font {
-  /* centrer verticalement le lien */
-}
-
-nav a:hover {
+.kaamelott-font:hover {
   text-decoration: none;
+  color: #a57824;
 }
 
+p a .item-actions {
+  display: inline-block;
+}
 
 /************************************************\
 ==================================================
@@ -61,10 +56,15 @@ nav a:hover {
 
 .kaamelott-banner.jumbotron {
   background-image: url('img/kaamelott-banner.jpg');
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: white;margin-top: 90px;
+  
+}
+
+.kaamelott-banner h1 {
+  font-weight: bold;
 }
 
 p.source {
@@ -132,9 +132,11 @@ blockquote {
 ==================================================
 \************************************************/
 
-.list-group a {
-  display: inline-block;
+footer .list-group {
   text-align: center;
-  margin: auto; /* centrer les icônes !!!*/
+}
 
+footer .list-group li {
+  display: inline-block;
+  margin-left: 5px;
 }

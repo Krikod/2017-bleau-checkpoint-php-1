@@ -1,10 +1,12 @@
 	
 	<footer>
-		<div class="list-group">
-			  <a class="list-group-item" href="https://fr-fr.facebook.com/kaamelott.laserie"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			  <a class="list-group-item" href="https://twitter.com/kaamelott"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-			  <a class="list-group-item" href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i></a>
-		</div>
+
+			<ul class="list-group">
+				  <li><a class="list-group-item" href="https://fr-fr.facebook.com/kaamelott.laserie"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				  <li><a class="list-group-item" href="https://twitter.com/kaamelott"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				  <li><a class="list-group-item" href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+			</ul>
+	
 	</footer>
 	<script
 	  src="https://code.jquery.com/jquery-2.2.4.min.js"
