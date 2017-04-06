@@ -1,6 +1,6 @@
 <?php
 
-	include 'includes/header.php'; 
+	include 'view/includes/header.php'; 
 	include_once 'modele/connexion_bdd.php';
 
 	$result = $bdd->query('SELECT * FROM citation ORDER BY id DESC');

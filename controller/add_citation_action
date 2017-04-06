@@ -10,7 +10,7 @@ if (
     echo "Merci de remplir tous les champs";
 }
 else{
-    include_once './modele/connexion_bdd.php';
+    include_once './model/connexion_bdd.php';
 
     $auteur = htmlspecialchars($_POST['author']);
     $citation = htmlspecialchars($_POST['content']);
@@ -20,9 +20,9 @@ else{
 
     $query = $bdd->prepare('INSERT INTO citation (author, content, chapter, date, image) VALUES (?, ?, ?, ?)');
     $query->execute(array(
-        $auteur,
-        $citation,
-        $episode,
+        $author,
+        $content,
+        $chapter,
         $date
         $image
         ));
