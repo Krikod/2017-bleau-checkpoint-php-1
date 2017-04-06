@@ -10,7 +10,7 @@ if (
     echo "Merci de remplir tous les champs";
 }
 else{
-    include_once 'modele/connexion_bdd.php';
+    include_once './modele/connexion_bdd.php';
 
     $auteur = htmlspecialchars($_POST['author']);
     $citation = htmlspecialchars($_POST['content']);
@@ -29,4 +29,4 @@ else{
     $query->closeCursor();
 }
 
-header('Location: index_admin.php');
+header('Location: ./index_admin.php');

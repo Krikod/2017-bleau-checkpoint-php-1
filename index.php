@@ -1,9 +1,9 @@
 
-<?php include 'includes/header.php'; ?>
+<?php include 'view/includes/header.php'; ?>
 	<div class="col-sm-12 col-md-12">
 		<nav>
 			<a href="index.php" class="kaamelott-font">Cestpasfaux.com</a>
-			<p class="item-actions"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Ajouter</a>
+			<p class="item-actions"><a href="view/add_citation_view.php" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Ajouter</a>
 		</nav>
 	</div>
 	<div class="container">
@@ -15,7 +15,7 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<div class="img-box">
-						<img class="kaamelott-underline" src="/img/livre-1-ambidextrie.jpg" alt="Perceval, Livre I, Ambidextrie">
+						<img class="kaamelott-underline" src="assets/img/livre-1-ambidextrie.jpg" alt="Perceval, Livre I, Ambidextrie">
 					</div>
 					<div class="quote">
 						<blockquote>
@@ -27,8 +27,11 @@
 						</p>
 						<span class="hider"></span>
 					</div>
-					<p class="item-actions"><a href="#" class="btn btn-danger" role="button">Supprimer</a> <a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Voir plus</a></p>
-					<p class="item-actions ajouter"><a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
+					<p class="item-actions">
+						<a href="controller/delete_citation_action.php" class="btn btn-danger" role="button">Supprimer</a>
+						<a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Voir plus</a>
+						<a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#1">Editer</a>
+					</p>
 				</div>
 			</div>
 			<!-- Modal -->
@@ -53,7 +56,7 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<div class="img-box">
-						<img class="kaamelott-underline" src="/img/livre-2-la-cassette.png" alt="Karadoc, Livre II, La Cassette">
+						<img class="kaamelott-underline" src="assets/img/livre-2-la-cassette.png" alt="Karadoc, Livre II, La Cassette">
 					</div>
 					<div class="quote">
 						<blockquote>
@@ -92,11 +95,11 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<div class="img-box">
-						<img class="kaamelott-underline" src="/img/livre-4-les-chaperons.jpg" alt="Perceval, Livre IV, Les Chaperons">
+						<img class="kaamelott-underline" src="assets/img/livre-4-les-chaperons.jpg" alt="Perceval, Livre IV, Les Chaperons">
 					</div>
 					<div class="quote">
 						<blockquote>
-							"En plus, je connais une technique pour tuer trois hommes en un coup rien qu’avec des feuilles mortes ! Alors là, vous êtes deux, vous avez bien de la chance."
+							"En plassetsus, je connais une technique pour tuer trois hommes en un coup rien qu’avec des feuilles mortes ! Alors là, vous êtes deux, vous avez bien de la chance."
 						</blockquote>
 						<p class="source">
 							Perceval,
@@ -131,7 +134,7 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<div class="img-box">
-						<img class="kaamelott-underline" src="/img/livre-2-sept-cent-quarante-quatre.jpg" alt="Karadoc, Livre II, Sept cent quarante-quatre">
+						<img class="kaamelott-underline" src="assets/img/livre-2-sept-cent-quarante-quatre.jpg" alt="Karadoc, Livre II, Sept cent quarante-quatre">
 					</div>
 					<div class="quote">
 						<blockquote>
@@ -170,7 +173,7 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<div class="img-box">
-						<img class="kaamelott-underline" src="/img/livre-2-corpore-sano.jpg" alt="Perceval, Livre I, Ambidextrie">
+						<img class="kaamelott-underline" src="assets/img/livre-2-corpore-sano.jpg" alt="Perceval, Livre I, Ambidextrie">
 					</div>
 					<div class="quote">
 						<blockquote>
@@ -209,7 +212,7 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<div class="img-box">
-						<img class="kaamelott-underline" src="/img/livre-1-l-imposteur.jpg" alt="Perceval, Livre I, Ambidextrie">
+						<img class="kaamelott-underline" src="assets/img/livre-1-l-imposteur.jpg" alt="Perceval, Livre I, Ambidextrie">
 					</div>
 					<div class="quote">
 						<blockquote>
@@ -246,7 +249,7 @@
 			</div>
 		</div>
 	</div>
-		<?php include 'includes/footer.php'; ?>
+		<?php include 'view/includes/footer.php'; ?>
 
 		
 

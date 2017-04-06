@@ -25,16 +25,23 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-field">
+ 					<div class="input-field">
 						<label for="date">Date d'ajout</label>
-						<input id="date" type="date" name="date">	
+						<input id="date" type="date" name="date">
 					</div>	
 				</div>
 				<div class="row">
-					<div class="input-field">
-						<label for="image">Ajouter une image</label>
-						<input id="image" type="image" name="image">	
-					</div>	
+					<form action="#">
+					    <div class="file-field input-field">
+					      <div class="btn">
+					        <span>Ajouter une image</span>
+					        <input type="file">
+					      </div>
+					      <div class="file-path-wrapper">
+					        <input class="file-path validate" type="text">
+					      </div>
+					     </div>
+			  		</form>
 				</div>
 				<div class="row center">
 					<input class="waves-effect waves-light btn" type="submit" value="Envoyer">
