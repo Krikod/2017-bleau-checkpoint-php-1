@@ -19,6 +19,6 @@
 			$('select').material_select();
 		});
 	</script>
-	<script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
