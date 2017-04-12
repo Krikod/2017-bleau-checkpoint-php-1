@@ -4,114 +4,19 @@
 session_start();
 
 // Connexion à MySQL
-try {
-	$bdd = new PDO('mysql:host=localhost;dbname=kaamelott_1_2017;charset=utf8', 'root', 'root');
-	}
-
-catch(Exception $e) {
-	die('Erreur : '.$e->getMessage());
-	}
+include 'model/connexion_bdd.php';
 
 // Inclusion du contrôleur s'il existe et s'il est spécifié
-if (!empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
-        include 'controleurs/'.$_GET['page'].'.php';
+if (!empty($_GET['page']) && is_file('controller/'.$_GET['page'].'.php')) {
+        include 'controller/'.$_GET['page'].'.php';
+	} else {
+        include 'controller/show_citation_action.php';
 	}
-else {
-        include 'controleurs/accueil.php';
-	}
 
 
 
 
 
-
-
-
-
-
-
-<?php include 'model/connexion_bdd.php' ?>
-<?php include 'model/citation_model.php' ?>
-<?php include 'view/includes/header.php'; ?>
-
-<div class="col-sm-12 col-md-12">
-	<nav>
-		<a href="index.php" class="kaamelott-font">Cestpasfaux.com</a>
-		<p class="item-actions">
-			<a href="view/add_citation_view.php" class="btn btn-kaamelott" role="button">Ajouter</a>
-		</p>
-	</nav>
-</div>
-<div class="container">
-	<div class="kaamelott-banner jumbotron kaamelott-underline">
-		<h1>C'EST PAS FAUX !</h1>
-		<p>Les meilleures citations de la série-TV Kaamelott</p>
-	</div>
-	<div class="row">
-
-		<?php $citations = get_all_citations($bdd); ?>		
-		<?php foreach ($citations as $citation) { ?>
-
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<div class="img-box">
-					<img class="kaamelott-underline" src="assets/img/livre-1-ambidextrie.jpg" alt="<?php echo $citation['chapter']; ?>">
-				</div>
-				<div class="quote">
-					<blockquote>"<?php echo $citation['content']; ?>"</blockquote>
-					<p class="source">
-						<?php echo $citation['author']; ?>,
-						<i><?php echo $citation['chapter']; ?></i>
-					</p>
-					<span class="hider"></span>
-				</div>
-				<p class="item-actions">
-				<!--On envoie en paramètre de l'url l'id de la citation -->
-					<a href="controller/delete_citation_action.php?id=<?php echo $citation['id']; ?>" class="btn btn-danger" role="button">Supprimer</a>
-					<a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#<?php echo $citation['id']; ?>">Voir plus</a>
-					<a href="view/update_citation_view.php?id=<?php echo $citation['id']; ?>" class="btn btn-kaamelott" role="button">Editer</a>
-				</p>
-			</div>
-		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="<?php echo $citation['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<blockquote>"<?php echo $citation['content']; ?>"</blockquote>
-						<p class="source">
-							<?php echo $citation['author']; ?>, <i><?php echo $citation['chapter']; ?></i>
-						</p>
-						<span class="hider"></span>
-					</div>
-				</div>
-			</div>
-		</div> <?php } ?>
-	</div>
-</div>
-
-<?php include 'view/includes/footer.php';?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
 /* ANCIEN index_admin.php
 
 

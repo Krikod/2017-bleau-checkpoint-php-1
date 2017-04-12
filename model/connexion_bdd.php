@@ -6,5 +6,5 @@
 			array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 	}
 	catch (PDOException $e){
-		echo "Echec de connexion: " . $e->getMessage();
+		die('Erreur : '.$e->getMessage());
 	}

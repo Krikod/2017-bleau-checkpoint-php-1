@@ -1,6 +1,9 @@
 <!-- Formulaire d'ajout de citation -->
 
-<?php include 'includes/header.php'; ?>
+<?php 
+include 'includes/header.php';
+include '../controller/add_citation_action.php';
+?>
 
 	<div class="container">
 		<div class="row">
@@ -9,7 +12,7 @@
 		<div class="row">
 			<!-- Action: fichier vers lequel les infos saisies par l'utilisateur vont être envoyées -->
 			<!-- Méthode: comment elles vont être envoyées -->
-			<form class="col s12" action="../controller/add_citation_action.php" method="POST">
+			<form class="col s12" action="../model/citation_model.php" method="POST">
 				
 				<div class="row">
 					<div class="input-field">
