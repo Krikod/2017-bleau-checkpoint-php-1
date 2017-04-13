@@ -4,7 +4,7 @@
 	<nav>
 		<a href="index.php" class="kaamelott-font">Cestpasfaux.com</a>
 		<p class="item-actions">
-			<a href="controller/add_citation_action.php" class="btn btn-kaamelott" role="button">Ajouter</a>
+			<a href="index.php?page=add_citation_action" class="btn btn-kaamelott" role="button">Ajouter</a>
 		</p>
 	</nav>
 </div>
@@ -32,9 +32,9 @@
 				</div>
 				<p class="item-actions">
 				<!--On envoie en paramètre de l'url l'id de la citation -->
-					<a href="../controller/delete_citation_action.php?id=<?php echo $citation['id']; ?>" class="btn btn-danger" role="button">Supprimer</a>
+					<a href="index.php?page=delete_citation_action&id=<?php echo $citation['id'];?>" class="btn btn-danger" role="button">Supprimer</a>
 					<a href="#" class="btn btn-kaamelott" role="button" data-toggle="modal" data-target="#<?php echo $citation['id']; ?>">Voir plus</a>
-					<a href="update_citation_view.php?id=<?php echo $citation['id']; ?>" class="btn btn-kaamelott" role="button">Editer</a>
+					<a href="index.php?page=update_citation_action&id=<?php echo $citation['id']; ?>" class="btn btn-kaamelott" role="button">Editer</a>
 				</p>
 			</div>
 		</div>

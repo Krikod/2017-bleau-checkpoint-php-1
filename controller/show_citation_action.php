@@ -9,7 +9,7 @@ include_once 'model/citation_model.php'; // include(dirname(__FILE__).'/../vues/
 //On récupère les citations
 $citations = get_all_citations($bdd);
 
-// On inclut la view
+// On inclut la vue
 include_once 'view/show_citations_view.php';
 
 ?>
