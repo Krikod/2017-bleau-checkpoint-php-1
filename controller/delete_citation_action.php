@@ -14,7 +14,11 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
 /*
 
 if {
-	$id = 
+	!empty($_POST['author']) ||
+    !empty($_POST['content']) || 
+    !empty($_POST['chapter']) || 
+    !empty($_POST['date'])
+
 	$author = htmlspecialchars($_GET['author']);
     $content = htmlspecialchars($_GET['content']);
     $chapter = htmlspecialchars($_GET['chapter']);
@@ -37,10 +41,7 @@ if {
 
 
 
-	empty($_POST['author']) ||
-    empty($_POST['content']) || 
-    empty($_POST['chapter']) || 
-    empty($_POST['date'])
+	
     ) {
     include_once'view/add_citation_view.php';
 }

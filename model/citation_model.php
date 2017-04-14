@@ -12,7 +12,7 @@ function get_all_citations($bdd)
 	$req = $bdd->query('SELECT * FROM citation ORDER BY id DESC');
 
 	// Traitement du resultat retourné par la requête
-	$citations = $req->fetchAll(); // Dans l'exemple: while ($data = mysql_fetch_assoc($req)){ $news[] = $data; }
+	$citations = $req->fetchAll();
 
 	// Renvoi du tableau contenant toutes les citations
 	return $citations;
@@ -49,86 +49,35 @@ function delete_citation($bdd) {
 }
 
 // Fonction qui permet de récupérer une citation
-function get_one_citation($bdd)
-{
-	// Stocker les données dans un tableau avant de les afficher.
-	$citation = array();
+function get_one_citation($bdd, $id) {
 
 	// Requête qui récupère la citation
-	$query = $bdd->query('SELECT author, content, chapter, date FROM citation WHERE id = ?');
-	$query->execute(array($_GET['id']));
+	$query = $bdd->prepare('SELECT * FROM citation WHERE id = :id');
+	$query->execute(array(
+		'id' => $id
+		));
+
 	// Renvoi du tableau contenant la citation
-	$citation = $query->fetchAll();
+	$citation = $query->fetch();
 	return $citation;
-	
 }
 
 // Fonction qui permet d'EDITER une citation
-function update_citation($bdd, $author, $content, $chapter, $date) {
+function update_citation($bdd, $id, $author, $content, $chapter, $date) {
 
-	$query = $bdd->prepare('UPDATE citation SET author = $author, content = $content, chapter = $chapter, date = $date WHERE id = ?');
+
+
+	$query = $bdd->prepare('UPDATE citation SET author = :author, content = :content, chapter = :chapter, date = :date WHERE id = :id');
 	
 		// Execution de la requête avec la donnée
-	$query->execute(array($_GET['id']));
+	$query->execute(
+		array(
+			'id' => $id,
+			'author' => $author,
+			'content' => $content,
+			'chapter' => $chapter,
+			'date' => $date
+			));
+	$query->closeCursor();
 		
 }
-
-
-
-
-
-
-/*
-
-
-
-$query = $bdd->prepare('UPDATE citation SET author = $author, content = :content, chapter = :chapter, date = :date WHERE id = ?');
-	$query->execute(array(
-		$author = $_POST['author'],
-		$content = $_POST['content'],
-		$chapter = $_POST['chapter'],
-		$date = $_POST['chapter']
-		));
-
-
-
-
-
-
-	$query = $bdd->prepare('UPDATE citation SET author= :newAuthor, content= :newContent, chapter= :newChapter, date= :newDate WHERE id = ?');
-	// Execution de la requête avec la donnée
-	
-
-	$query = $bdd->prepare('INSERT INTO citation (author, content, chapter, date) VALUES (?, ?, ?, ?)');
-	// Execution de la requête avec la donnée
-	$query->execute(array(
-		$author,
-		$content,
-		$chapter,
-		$date
-		));
-
-
-
-	
-	
-
-	
-}
-
-function add_citation($bdd, $author, $content, $chapter, $date) {
-	// Requête d'ajout en base de données
-	// La requête préparer permet d'executer une action en deux temps:
-	//		- écriture de la requête, puis
-	//		- ajout des variables et exécution
-	// Permet d'exécuter une requête plusieurs fois mais avec des valeurs différentes, sécurise également la requête
-	// http://php.net/manual/fr/pdo.prepare.php
-	$query = $bdd->prepare('INSERT INTO citation (author, content, chapter, date) VALUES (?, ?, ?, ?)');
-	// Execution de la requête avec la donnée
-	$query->execute(array(
-		$author,
-		$content,
-		$chapter,
-		$date
-		));
-		*/
